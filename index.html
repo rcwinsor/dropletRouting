@@ -64,11 +64,11 @@
             scene.registerBeforeRender(function () {
                 camera.alpha += 0.0005 * scene.getAnimationRatio();
                 //blue
-                if (i % 120 < 30) {
+                if (i % 4 < .25) {
                     droplet1.position.x+=100;
-                } else if (i % 120 < 60) {
+                } else if (i % 4 < .5) {
                     droplet1.position.z+=100;
-                } else if (i % 120 < 90) {
+                } else if (i % 4 < .75) {
                     droplet1.position.x-=100;
                 } else {
                     droplet1.position.z-=100;
