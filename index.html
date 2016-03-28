@@ -65,13 +65,13 @@
                 camera.alpha += 0.0005 * scene.getAnimationRatio();
                 //blue
                 if (i % 120 < 30) {
-                    droplet1.position.x+=100;
+                    droplet1.position.x+=10;
                 } else if (i % 120 < 60) {
-                    droplet1.position.z+=100;
+                    droplet1.position.z+=10;
                 } else if (i % 120 < 90) {
-                    droplet1.position.x-=100;
+                    droplet1.position.x-=10;
                 } else {
-                    droplet1.position.z-=100;
+                    droplet1.position.z-=10;
                 }
                 i++;
             });
