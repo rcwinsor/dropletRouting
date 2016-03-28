@@ -56,7 +56,7 @@
             droplet1.position.y = 3;
             droplet1.position.z = 0;
             //ground
-            var ground = BABYLON.Mesh.CreateGround("ground", 500, 500, 2, scene);
+            var ground = BABYLON.Mesh.CreateGround("ground", 500, 500, 10, scene);
             //background color
             scene.clearColor = new BABYLON.Color3(0, 0, 0);
             var i = 1;
@@ -64,14 +64,14 @@
             scene.registerBeforeRender(function () {
                 camera.alpha += 0.0005 * scene.getAnimationRatio();
                 //blue
-                if (i % 4 < .25) {
-                    droplet1.position.x+=100;
-                } else if (i % 4 < .5) {
-                    droplet1.position.z+=100;
-                } else if (i % 4 < .75) {
-                    droplet1.position.x-=100;
+                if (i % 120 < 30) {
+                    droplet1.position.x+=10;
+                } else if (i % 120 < 60) {
+                    droplet1.position.z+=10;
+                } else if (i % 120 < 90) {
+                    droplet1.position.x-=10;
                 } else {
-                    droplet1.position.z-=100;
+                    droplet1.position.z-=10;
                 }
                 i++;
             });
