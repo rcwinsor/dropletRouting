@@ -52,9 +52,9 @@
             materialDroplet1.specularColor = new BABYLON.Color3(0.2, 0.2, 0.8);
             materialDroplet1.alpha = 0.6;
             droplet1.material = materialDroplet1;
-            droplet1.position.x = -45;
+            droplet1.position.x = 0;
             droplet1.position.y = 3;
-            droplet1.position.z = -45;
+            droplet1.position.z = 0;
             //ground
             var ground = BABYLON.Mesh.CreateGround("ground", 500, 500, 2, scene);
             //background color
@@ -65,13 +65,13 @@
                 camera.alpha += 0.0005 * scene.getAnimationRatio();
                 //blue
                 if (i % 120 < 30) {
-                    droplet1.position.x+=1;
+                    droplet1.position.x+=100;
                 } else if (i % 120 < 60) {
-                    droplet1.position.z+=1;
+                    droplet1.position.z+=100;
                 } else if (i % 120 < 90) {
-                    droplet1.position.x-=1;
+                    droplet1.position.x-=100;
                 } else {
-                    droplet1.position.z-=1;
+                    droplet1.position.z-=100;
                 }
                 i++;
             });
